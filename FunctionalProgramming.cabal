@@ -1,0 +1,35 @@
+cabal-version:      3.0
+name:               FunctionalProgramming
+version:            0.1.0.0
+license:            MIT
+license-file:       LICENSE
+author:             jeroenversteegh
+maintainer:         jeroenversteegh@gmail.com
+build-type:         Simple
+extra-doc-files:    CHANGELOG.md
+extra-source-files:
+    levels/*.json
+    assets/*.bmp
+
+common warnings
+    ghc-options: -Wall
+
+executable FunctionalProgramming
+    import:           warnings
+    main-is:          Main.hs
+    other-modules:
+        Controller
+        GameData
+        LevelLoad
+        Menu
+        Physics
+        View
+    build-depends:
+        base ^>=4.20.2.0,
+        aeson,
+        bytestring,
+        containers,
+        directory,
+        gloss
+    hs-source-dirs:   src
+    default-language: Haskell2010

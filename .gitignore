@@ -1,0 +1,6 @@
+dist-newstyle/
+.idea/
+*.exe
+*.hi
+*.o
+*.dll

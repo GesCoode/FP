@@ -1,0 +1,16 @@
+{
+  "statics": [
+    {
+      "center": { "x": 0, "y": 0 },
+      "width": 120,
+      "height": 80,
+      "sprite": "block"
+    }
+  ],
+  "players": [
+    {
+      "center": { "x": -200, "y": 0 },
+      "vel": { "x": 0, "y": 0 }
+    }
+  ]
+}
