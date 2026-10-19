@@ -42,9 +42,10 @@ handleEvent (EventKey (SpecialKey KeyEsc) Down _ _) app =
     Playing _ -> pure (initialApp (sprites app))
     Menu      -> pure app
 
-handleEvent (EventKey (Char 'd') Down _ _) app =
+-- 'c' toggles wireframe view (no textures). 'd' is reserved for move-right (WASD).
+handleEvent (EventKey (Char 'c') Down _ _) app =
   pure $ mapPlaying app $ \gs -> gs { gsDebug = not (gsDebug gs) }
-handleEvent (EventKey (Char 'D') Down _ _) app =
+handleEvent (EventKey (Char 'C') Down _ _) app =
   pure $ mapPlaying app $ \gs -> gs { gsDebug = not (gsDebug gs) }
 
 handleEvent (EventKey key keyState _ _) app =

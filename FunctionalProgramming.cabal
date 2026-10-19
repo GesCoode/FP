@@ -21,14 +21,12 @@ executable FunctionalProgramming
         Controller
         GameData
         LevelLoad
+        LevelParser
         Menu
         Physics
         View
     build-depends:
         base ^>=4.20.2.0,
-        aeson,
-        bytestring,
-        containers,
         directory,
         gloss
     hs-source-dirs:   src

@@ -1,6 +1,5 @@
 module Main where
 
-import Data.Map.Strict (fromList)
 import Graphics.Gloss (Display (..), Picture, black, color, loadBMP, rectangleSolid, white)
 import Graphics.Gloss.Interface.IO.Game (playIO)
 import System.Directory (doesFileExist)
@@ -23,7 +22,8 @@ loadSprite name path = do
 loadSprites :: IO SpriteAtlas
 loadSprites = do
   block <- loadSprite "block" "assets/block.bmp"
-  pure (fromList [block])
+  -- Add more sprites here
+  pure [block]
 
 main :: IO ()
 main = do
